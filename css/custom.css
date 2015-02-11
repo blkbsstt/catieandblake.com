@@ -1,3 +1,20 @@
+html {
+  height: 100%
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+}
+
+@media (max-width:768px) {
+body {
+  font-size: 50%;
+}
+}
+
 .jumbotron {
    background: #54446C;
    padding-top: 100px;
@@ -8,9 +25,35 @@
    font-family: 'Alex Brush', cursive;
 }
 
+.cursive {
+   font-family: 'Alex Brush', cursive;
+}
+
 .lead {
    font-family: 'Lato', sans-serif;
 }
+
+.map-text {
+    color: #fff;
+}
+
+.map-text h1 {
+    font-size: 90px;
+}
+
+.map-text p {
+    font-size: 36px;
+}
+
+/* @media (max-width:1080px) { */
+/*   .map-text h1 { */
+/*     font-size: 54px; */
+/*   } */
+
+/*   .map-text p { */
+/*     font-size: 18px; */
+/*   } */
+/* } */
 
 a {
    color: #54446C;
@@ -42,17 +85,21 @@ body {
 }
 
 .anchor {
-   margin-top: -70px;
-   padding-top: 70px;
+   margin-top: -50px;
+   padding-top: 50px;
+   padding-bottom: 100px;
 }
 
 .navbar-default {
   background-color: #54446C;
   border-color: #54446C;
+  font-size: 15px;
 }
 
 .navbar-default .navbar-brand {
   color: #fff;
+  font-family: 'Alex Brush', cursive;
+  font-size: 30px;
 }
 
 .navbar-default .navbar-toggle {
@@ -129,7 +176,7 @@ body {
 }
 
 .navbar-toggle {
-  max-height: 35px;
+  max-height: 30px;
 }
 
 .navbar-default .navbar-collapse
@@ -143,9 +190,24 @@ body {
   text-align:left;
   text-shadow:0 1px 0 rgba(0,0,0,.1);
   background-color:#54446C;
-  padding-top: 50px;
-  padding-bottom: 10px;
+  padding-top: 100px;
+  padding-bottom: 60px;
   margin-bottom: 20px;
+  overflow: false;
+}
+
+.map-text h1 {
+    font-size: 96px;
+    padding-top: 150px;
+}
+
+.map-text p {
+    font-size: 36px;
+}
+
+.map-text .small {
+    font-size: 20px;
+    margin-top: 90px;
 }
 
 .homepage-header h1 {
@@ -157,6 +219,14 @@ body {
 }
 
 @media (max-width:768px) {
+  .map-text h1 {
+      font-size: 48px;
+  }
+
+  .map-text p {
+      font-size: 20px;
+  }
+
   .homepage-header h1 {
     font-size: 54px;
   }
@@ -174,7 +244,14 @@ body {
   border: none !important;
 }
 
-body {
-  background-position: 0px -15px;
-  background-image: url(http://colourlovers.com.s3.amazonaws.com/images/patterns/4563/4563629.png);
+/* #map-canvas { */
+/*   width: 100%; */
+/*   height: 200px; */
+/* } */
+
+.white, .white:visited, .white:hover, .white:focus {
+    color: #fff;
+}
+.purple , .purple:visited, .purple:hover, .purple:focus {
+    color: #54446C;
 }

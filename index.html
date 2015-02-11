@@ -33,88 +33,338 @@
   <link href='http://fonts.googleapis.com/css?family=Alex+Brush' rel='stylesheet' type='text/css'>
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-  <link href="bower_components/fullcalendar/dist/fullcalendar.min.css" rel="stylesheet">
-  <link href="bower_components/fullcalendar/dist/fullcalendar.print.css" rel="stylesheet" media="print">
-  <link href="css/bib-publication-list.css" rel="stylesheet">
   <link href="css/custom.css" rel="stylesheet">
+
+  <style type="text/css">
+    .img-centered {
+        margin: 0 auto;
+        padding: 25px;
+    }
+
+    .img-circle-cropped {
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+    }
+
+    .on-green {
+        color: #54446C;
+        background-position: 0px -15px;
+        background-image: url(http://colourlovers.com.s3.amazonaws.com/images/patterns/4563/4563629.png);
+    }
+
+    .chevrons-top {
+        color: #54446C;
+        background-image: url(images/chevrons-top.png);
+        background-position: 0px 28px;
+        background-repeat: repeat-x;
+    }
+
+    #about {
+        height: 900px;
+    }
+
+    #ceremony {
+        height: 800px;
+        overflow: hidden;
+    }
+
+    #map-canvas {
+        height: 800px;
+        cursor: pointer;
+    }
+
+    .on-lav {
+        color: #fff;
+        background-color: #bbb9d0;
+    }
+
+    #accommodations {
+        background-image: url(images/wide.jpg);
+        background-position: center center;
+        background-size: cover;
+        <!-- overflow: hidden; -->
+    }
+
+    .overlay {
+        display: block;
+        position: absolute;
+        background-color: rgba(200,200,200,0.5);
+        top: 20px;
+        left: 0px;
+        width: 0px;
+        height: 0px;
+    }
+
+    .section-head {
+        font-size:80px;
+        padding-top:50px;
+        padding-bottom:50px;
+    }
+
+    .wp-name {
+        margin-bottom:-10px;
+    }
+  </style>
 </head>
 
 <body>
   <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <div class="container">
+    <div class="container-fluid">
+
       <div class="navbar-header">
         <button class="navbar-toggle collapsed" type="button"
           data-toggle="collapse" data-target="#navbar-collapse-items"
-          style="padding: 5px 10px">
+          style="padding: 5px 5px">
           <span class="sr-only">Toggle navigation</span>
           <span class="fa fa-bars fa-lg fa-fw"></span>
         </button>
-        <a class="navbar-brand hidden">Catie &amp; Blake</a>
+        <a class="navbar-brand hidden" style="padding: 17px 10px" href="#top"/>Catie &amp; Blake</a>
       </div>
+
       <div class="collapse navbar-collapse" id="navbar-collapse-items">
         <div id="navbar-scrollspy">
           <ul class="nav navbar-nav navbar-right">
+
             <li style="display:none"><a href="#top"></a></li>
+
             <li>
               <a href="#about">
                 <i class="fa fa-heart fa-lg fa-fw"></i>
                 <p class="visible-xs-inline navbar-text navbar-label">About</p>
               </a>
             </li>
+
             <li>
               <a href="#ceremony">
                 <i class="fa fa-map-marker fa-lg fa-fw"></i>
                 <p class="visible-xs-inline navbar-text navbar-label">Ceremony</p>
               </a>
             </li>
+
             <li>
-              <a href="#registry">
-                <i class="fa fa-gift fa-lg fa-fw"></i>
-                <p class="visible-xs-inline navbar-text navbar-label">Registry</p>
+              <a href="#wedding-party">
+                <i class="fa fa-users fa-lg fa-fw"></i>
+                <p class="visible-xs-inline navbar-text navbar-label">Wedding Party</p>
               </a>
             </li>
+
             <li>
               <a href="#accommodations">
                 <i class="fa fa-building fa-lg fa-fw"></i>
                 <p class="visible-xs-inline navbar-text navbar-label">Accommodations</p>
               </a>
             </li>
+
+            <li>
+              <a href="#registry">
+                <i class="fa fa-gift fa-lg fa-fw"></i>
+                <p class="visible-xs-inline navbar-text navbar-label">Registry</p>
+              </a>
+            </li>
+
             <li>
               <a href="#rsvp">
                 <i class="fa fa-envelope fa-lg fa-fw"></i>
                 <p class="visible-xs-inline navbar-text navbar-label">RSVP</p>
               </a>
             </li>
+
           </ul>
         </div>
       </div>
     </div><!-- /.container -->
   </nav>
-  <div class="homepage-header" id="top">
-    <div class="container">
-        <h1 class="headline text-center">Catie & Blake</h1>
+  <!-- <div class="homepage-header" id="top"> -->
+  <!-- </div> -->
+
+  <div class="container-fluid">
+    <div class="row homepage-header" id="top">
+        <h1 class="headline text-center">Catie &amp; Blake</h1>
         <p class="text-center lead">9.12.2015</p>
     </div>
-  </div>
 
-  <div class="container">
-    <div class="row anchor" id="about">
+    <div class="row anchor chevrons-top" id="about">
+        <img src="images/IMG_6157_1919.jpg" class="img-responsive img-centered img-circle-cropped" style="width:600px;" alt="Us!"/>
+        <div class="col-xs-12 text-center cursive">
+            <h1>
+            September 12, 2015
+            <br/>
+            5:00 pm
+            <br/>
+            Dothan Area Botanical Gardens
+            <br/>
+            Dothan, AL
+            </h1>
+        </div>
     </div>
 
-    <div class="row anchor" id="publications">
-      <div class="col-xs-12">
+    <div class="row anchor" id="ceremony">
+      <div id="map-canvas" class="col-xs-12">
       </div>
     </div>
 
-    <div class="row anchor" id="schedule">
+    <div class="row anchor text-center" style="min-height:700px;" id="wedding-party">
+        <div class="col-xs-12">
+            <h1 class="cursive purple section-head">Wedding Party</h1>
+        </div>
+        <div class="col-xs-6 col-sm-4">
+            <img src="http://placehold.it/325x325" class="img-responsive img-centered img-circle-cropped" style="width:325px;" alt="Placeholder"/>
+            <p class="text-center purple cursive wp-name" style="font-size: 35px;">Jennifer Cooper</p>
+            <p class="text-center purple lead">Maid of Honor</p>
+        </div>
+        <div class="col-xs-6 col-sm-4">
+            <img src="http://placehold.it/325x325" class="img-responsive img-centered img-circle-cropped" style="width:325px;" alt="Placeholder"/>
+            <p class="text-center purple cursive wp-name" style="font-size: 35px;">Catie Cooper</p>
+            <p class="text-center purple lead">Bride</p>
+        </div>
+        <div class="col-xs-6 col-sm-4">
+            <img src="http://placehold.it/325x325" class="img-responsive img-centered img-circle-cropped" style="width:325px;" alt="Placeholder"/>
+            <p class="text-center purple cursive wp-name" style="font-size: 35px;">Lacey Bassett</p>
+            <p class="text-center purple lead">Bridesmaid</p>
+        </div>
+        <div class="col-xs-6 col-sm-4">
+            <img src="http://placehold.it/325x325" class="img-responsive img-centered img-circle-cropped" style="width:325px;" alt="Placeholder"/>
+            <p class="text-center purple cursive wp-name" style="font-size: 35px;">Richard Bassett</p>
+            <p class="text-center purple lead">Best Man</p>
+        </div>
+        <div class="col-xs-6 col-sm-4">
+            <img src="http://placehold.it/325x325" class="img-responsive img-centered img-circle-cropped" style="width:325px;" alt="Placeholder"/>
+            <p class="text-center purple cursive wp-name" style="font-size: 35px;">Blake Bassett</p>
+            <p class="text-center purple lead">Groom</p>
+        </div>
+        <div class="col-xs-6 col-sm-4">
+            <img src="http://placehold.it/325x325" class="img-responsive img-centered img-circle-cropped" style="width:325px;" alt="Placeholder"/>
+            <p class="text-center purple cursive wp-name" style="font-size: 35px;">Steven Motes</p>
+            <p class="text-center purple lead">Groomsman</p>
+        </div>
+    </div>
+
+    <div class="row anchor text-center" style="min-height:800px;" id="accommodations">
+      <!-- <div class="overlay"></div> -->
       <div class="col-xs-12">
+        <h1 class="cursive white section-head">Accommodations</h1>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+          <h1 class="cursive white">Troy Hotel</h1>
+          <p class="white lead">
+             Hotel Address<br/>
+             Troy, AL 36081<br/>
+             Address Line 3
+          </p>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+          <h1 class="cursive white">Dothan Hotel 1</h1>
+          <p class="white lead">
+             Hotel Address<br/>
+             Address Line 2<br/>
+             Address Line 3
+          </p>
+      <!-- </div> -->
+      <!-- <div class="col-xs-12 col-sm-4"> -->
+          <h1 class="cursive white">Dothan Hotel 2</h1>
+          <p class="white lead">
+             Hotel Address<br/>
+             Address Line 2<br/>
+             Address Line 3
+          </p>
+      </div>
+    </div>
+
+    <div class="row anchor text-center on-green" style="height:700px;" id="registry">
+      <div class="col-xs-12">
+        <h1 class="cursive white section-head">Registry</h1>
+      </div>
+    </div>
+
+    <div class="row anchor text-center on-lav" style="height:700px;" id="rsvp">
+      <div class="col-xs-12">
+          <h1>RSVP</h1>
       </div>
     </div>
   </div> <!-- /container -->
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyDP2GnUfaK7JCQdcIrfpLq5Y0xJtGP4YOQ"></script>
   <script src="js/bootstrap.min.js"></script>
   <script type="text/javascript">
+    function TintedMapTypeOverlay(color, opacity) {
+        this.tileSize = new google.maps.Size(100,100);
+        this.color = color;
+        this.opacity = opacity;
+    }
+    TintedMapTypeOverlay.prototype.getTile = function(coord, zoom, ownerDocument) {
+        var div = ownerDocument.createElement('div');
+        div.style.width = this.tileSize.width + 'px';
+        div.style.height = this.tileSize.height + 'px';
+        div.style.backgroundColor = this.color;
+        div.style.opacity = this.opacity;
+        return div;
+    };
+
+    var map;
+    var mapCenter;
+
+    function map_init() {
+        var mapOptions = {
+            center: { lat: 31.29585, lng: -85.3713 },
+            zoom: 19,
+            mapTypeId: google.maps.MapTypeId.HYBRID,
+            disableDefaultUI: true,
+            draggable: false,
+            disableDoubleClickZoom: true,
+            heading: 180,
+            scrollwheel: false,
+            tilt: 45,
+            styles: [{
+              elementType: "labels",
+              stylers: [{
+                visibility: "off"
+              }]
+            }]
+        };
+
+        map = new google.maps.Map(document.getElementById('map-canvas'),
+                mapOptions);
+
+        var map_url = 'https://www.google.com/maps/place/Dothan+Area+Botancial+Gardens/@31.294874,-85.371366,10z';
+
+        google.maps.event.addListener(map, 'click', function(event) {
+            window.location.href = map_url;
+        });
+
+        var overlay = new TintedMapTypeOverlay('#BBB9D0', 0.5);
+        var overlay = new TintedMapTypeOverlay('#00806C', 0.6);
+        map.overlayMapTypes.insertAt(0, overlay);
+
+        var dabg = document.createElement('h1');
+        dabg.innerHTML = 'Dothan Area Botanical Gardens';
+        dabg.className = 'headline text-center';
+        var info = document.createElement('p');
+        info.innerHTML = '<a class="white" href="' + map_url + '">5130 Headland Ave, Dothan, AL 36303</a>';
+        info.className = 'lead text-center';
+        var extra = document.createElement('p');
+        extra.innerHTML = 'Ceremony &amp; Reception';
+        extra.className = 'text-center cursive';
+        var extra2 = document.createElement('p');
+        extra2.innerHTML = '<br/>Please keep in mind that we are planning an outdoor ceremony and festivities. <br/>High heels and uncomfortable formal wear are not recommended.'
+        extra2.className = 'text-center small';
+        var myTextDiv = document.createElement('div');
+        myTextDiv.className = 'map-text';
+        myTextDiv.appendChild(dabg);
+        myTextDiv.appendChild(info);
+        myTextDiv.appendChild(extra);
+        myTextDiv.appendChild(extra2);
+
+        map.controls[google.maps.ControlPosition.CENTER].push(myTextDiv);
+        mapCenter = map.getCenter();
+    }
+
+    google.maps.event.addDomListener(window, 'load', map_init);
+    google.maps.event.addDomListener(window, 'resize', function() {
+        map.setCenter(mapCenter);
+    });
+
     $(document).ready(function() {
       $('body').scrollspy({ 'target': '#navbar-scrollspy' });
 
@@ -137,6 +387,30 @@
       brand.fadeOut(0);
       scrollCheck();
       $(document).scroll(scrollCheck);
+      $(function() {
+        $('a[href*=#]:not([href=#])').click(function() {
+          if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+            if (target.length) {
+              $('html,body').animate({
+                scrollTop: target.offset().top
+              }, 1000);
+              return false;
+            }
+          }
+        });
+      });
+
+    function setOverlay(id) {
+        var overlay = $("#" + id + " > .overlay");
+        var overlaid = $("#" + id);
+        overlay.width(overlaid.css("width"));
+        overlay.height(parseInt(overlaid.css("height")) - 100);
+        overlay.css("top", parseInt(overlaid.offset().top) + 50 + "px");
+        overlay.css("left", overlaid.offset().left + "px");
+    }
+    <!-- setOverlay("accommodations"); -->
     });
   </script>
 </body>
