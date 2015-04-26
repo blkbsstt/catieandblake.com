@@ -38,10 +38,10 @@
   <style type="text/css">
     .img-centered {
         margin: 0 auto;
-        padding: 25px;
     }
 
     .img-circle-cropped {
+        padding: 25px;
         border-radius: 50%;
         -webkit-border-radius: 50%;
         -moz-border-radius: 50%;
@@ -61,7 +61,7 @@
     }
 
     #about {
-        height: 900px;
+        <!-- height: 900px; -->
     }
 
     #ceremony {
@@ -72,6 +72,12 @@
     #map-canvas {
         height: 800px;
         cursor: pointer;
+        }
+
+    #registry {
+        background-image: url(images/river-overlay.png);
+        background-position: center;
+        background-size: cover;
     }
 
     .on-lav {
@@ -83,12 +89,12 @@
         font-size:25px;
     }
 
-    #accommodations {
-        background-image: url(images/wide.jpg);
-        background-position: center center;
-        background-size: cover;
-        <!-- overflow: hidden; -->
-    }
+    <!-- #accommodations { -->
+    <!--     background-image: url(images/wide.jpg); -->
+    <!--     background-position: center center; -->
+    <!--     background-size: cover; -->
+    <!--     <\!-- overflow: hidden; -\-> -->
+    <!-- } -->
 
     .overlay {
         display: block;
@@ -100,10 +106,16 @@
         height: 0px;
     }
 
+    .registry-image {
+        max-height: 100px;
+        margin-top: -10px;
+        margin-bottom: 10px;
+    }
+
     .section-head {
-        font-size:80px;
+        font-size:10em;
         padding-top:50px;
-        padding-bottom:50px;
+        padding-bottom: 0px;
     }
 
     .wp-name {
@@ -116,6 +128,7 @@
             font-size: 28px;
         }
     }
+
     img.desaturate{
         -webkit-filter: grayscale(100%);
         filter: grayscale(100%);
@@ -177,20 +190,21 @@
                 <p class="visible-xs-inline navbar-text navbar-label">Wedding Party</p>
               </a>
             </li>
+            
+            <li>
+              <a href="#registry">
+                <i class="fa fa-gift fa-lg fa-fw"></i>
+                <p class="visible-xs-inline navbar-text navbar-label">Registry</p>
+              </a>
+            </li>
 
-<!--             <li> -->
-<!--               <a href="#accommodations"> -->
-<!--                 <i class="fa fa-building fa-lg fa-fw"></i> -->
-<!--                 <p class="visible-xs-inline navbar-text navbar-label">Accommodations</p> -->
-<!--               </a> -->
-<!--             </li> -->
+            <li>
+              <a href="#accommodations">
+                <i class="fa fa-building fa-lg fa-fw"></i>
+                <p class="visible-xs-inline navbar-text navbar-label">Accommodations</p>
+              </a>
+            </li>
 
-<!--             <li> -->
-<!--               <a href="#registry"> -->
-<!--                 <i class="fa fa-gift fa-lg fa-fw"></i> -->
-<!--                 <p class="visible-xs-inline navbar-text navbar-label">Registry</p> -->
-<!--               </a> -->
-<!--             </li> -->
 
 <!--             <li> -->
 <!--               <a href="#rsvp"> -->
@@ -213,7 +227,7 @@
         <p class="text-center lead">9.12.2015</p>
     </div>
 
-    <div class="row anchor chevrons-top" id="about">
+    <div class="row anchor chevrons-top" style="min-height:700px" id="about">
         <img src="images/IMG_6157_1919.jpg" class="img-responsive img-centered img-circle-cropped" style="width:600px;" alt="Us!"/>
         <div class="col-xs-12 text-center cursive">
             <h1>
@@ -225,6 +239,9 @@
             <br/>
             Dothan, AL
             </h1>
+            <p class="lead purple">
+            RSVP at <a style="text-decoration:underline;" href="http://catieandblake.rsvpify.com">catieandblake.rsvpify.com</a>
+            </p>
         </div>
     </div>
 
@@ -268,10 +285,80 @@
             <p class="text-center purple lead">Groomsman</p>
         </div>
     </div>
+    
+    <div class="row text-center white" id="registry" style="min-height:700px;">
+      <h1 class="cursive section-head" style="margin-bottom:-5px;">Registry</h1>
+      <div class="col-xs-6 col-xs-offset-6 col-xs-pull-6">
+        <div class="row">
+            <div class="col-xs-12">
+              <a href="http://www.bedbathandbeyond.com/store/page/Registry">
+                <img class="img-responsive img-centered registry-image" src="images/registry-bed-bath-and-beyond.png"></img>
+              </a>
+            </div>
+            <div class="col-xs-12">
+              <a href="http://www.amazon.com/gp/wedding/homepage/">
+                <img class="img-responsive img-centered registry-image" src="images/registry-amazon.png"></img>
+              </a>
+            </div>
+            <div class="col-xs-12">
+              <a href="http://www.target.com/gift-registry/wedding-registry">
+                <img class="img-responsive img-centered registry-image" src="images/registry-target.png"></img>
+              </a>
+            </div>
+        </div>
+      </div>
+      <div class="col-xs-6">
+        <div class="row">
+          <div class="col-xs-12">
+            <p class="lead">In Troy</p>
+          </div>
+          <div class="col-xs-12">
+            <a href="http://douglasbrosjewelry.com/">
+              <img class="img-responsive img-centered registry-image" src="images/registry-douglasbro.png"></img>
+            </a>
+          </div>
+          <div class="col-xs-12">
+            <a href="https://plus.google.com/104587445549228371299/about">
+              <img class="img-responsive img-centered registry-image" src="images/registry-familyties.png"></img>
+            </a>
+          </div>
+          <div class="col-xs-12">
+            <a href="https://www.facebook.com/pages/First-Impression/250009632656">
+              <img class="img-responsive img-centered registry-image" src="images/registry-firstimpressions.png"></img>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row anchor text-center purple" style="min-height:700px;" id="accommodations">
+      <h1 class="cursive section-head">Accommodations</h1>
+      <div class="col-lg-4"></div>
+      <div class="col-lg-4 col-xs-12">
+        <a href="http://www.comfortsuites.com/hotel-dothan-alabama-AL342">
+          <img src="images/comfort-suites-cropped.jpg" class="img-responsive img-centered img-circle-cropped" style="width:400px;" alt="Comfort Suites"/>
+        </a>
+        <p class="lead">
+          <a style="text-decoration:underline" href="http://www.comfortsuites.com/hotel-dothan-alabama-AL342">
+            Comfort Suites
+          </a>
+          <br/>
+          1650 Westgate Pkwy<br/>
+          Dothan, AL 36303<br/>
+          (334) 792-9000<br/>
+        </p>
+        <p class="lead">
+          Call and reserve by August 21<br/>
+          under the Cooper-Bassett wedding<br/>
+          for the $85/night group rate
+        </p>
+      </div>
+      <div class="col-lg-4"></div>
+    </div>
 
     <div class="row" id="footer">
-        <h1 class="text-center purple lead">Information on Accommodations, Registries, and RSVP will be added soon!</h1>
-        <img src="images/logo-purple.png" class="img-responsive img-centered" style="max-width:400px;" alt="Logo"/>
+      <div style="min-height:120px;"></div>
+      <img src="images/logo-purple.png" class="img-responsive img-centered" style="max-width:400px;" alt="Logo"/>
     </div>
 
     <!-- <div class="row anchor text-center" style="min-height:800px;" id="accommodations"> -->
@@ -323,118 +410,118 @@
   <script src="js/bootstrap.min.js"></script>
   <script type="text/javascript">
     function TintedMapTypeOverlay(color, opacity) {
-        this.tileSize = new google.maps.Size(100,100);
-        this.color = color;
-        this.opacity = opacity;
+    this.tileSize = new google.maps.Size(100,100);
+    this.color = color;
+    this.opacity = opacity;
     }
     TintedMapTypeOverlay.prototype.getTile = function(coord, zoom, ownerDocument) {
-        var div = ownerDocument.createElement('div');
-        div.style.width = this.tileSize.width + 'px';
-        div.style.height = this.tileSize.height + 'px';
-        div.style.backgroundColor = this.color;
-        div.style.opacity = this.opacity;
-        return div;
+    var div = ownerDocument.createElement('div');
+    div.style.width = this.tileSize.width + 'px';
+    div.style.height = this.tileSize.height + 'px';
+    div.style.backgroundColor = this.color;
+    div.style.opacity = this.opacity;
+    return div;
     };
 
     var map;
     var mapCenter;
 
     function map_init() {
-        var mapOptions = {
-            center: { lat: 31.29585, lng: -85.3713 },
-            zoom: 19,
-            mapTypeId: google.maps.MapTypeId.HYBRID,
-            disableDefaultUI: true,
-            draggable: false,
-            disableDoubleClickZoom: true,
-            heading: 180,
-            scrollwheel: false,
-            tilt: 45,
-            styles: [{
-              elementType: "labels",
-              stylers: [{
-                visibility: "off"
-              }]
-            }]
-        };
+    var mapOptions = {
+    center: { lat: 31.29585, lng: -85.3713 },
+    zoom: 19,
+    mapTypeId: google.maps.MapTypeId.HYBRID,
+    disableDefaultUI: true,
+    draggable: false,
+    disableDoubleClickZoom: true,
+    heading: 180,
+    scrollwheel: false,
+    tilt: 45,
+    styles: [{
+    elementType: "labels",
+    stylers: [{
+    visibility: "off"
+    }]
+    }]
+    };
 
-        map = new google.maps.Map(document.getElementById('map-canvas'),
-                mapOptions);
+    map = new google.maps.Map(document.getElementById('map-canvas'),
+    mapOptions);
 
-        var map_url = 'https://www.google.com/maps/place/Dothan+Area+Botancial+Gardens/@31.294874,-85.371366,10z';
+    var map_url = 'https://www.google.com/maps/place/Dothan+Area+Botancial+Gardens/@31.294874,-85.371366,10z';
 
-        google.maps.event.addListener(map, 'click', function(event) {
-            window.location.href = map_url;
-        });
+    google.maps.event.addListener(map, 'click', function(event) {
+    window.location.href = map_url;
+    });
 
-        var overlay = new TintedMapTypeOverlay('#BBB9D0', 0.5);
-        var overlay = new TintedMapTypeOverlay('#00806C', 0.6);
-        map.overlayMapTypes.insertAt(0, overlay);
+    var overlay = new TintedMapTypeOverlay('#BBB9D0', 0.5);
+    var overlay = new TintedMapTypeOverlay('#00806C', 0.6);
+    map.overlayMapTypes.insertAt(0, overlay);
 
-        var dabg = document.createElement('h1');
-        dabg.innerHTML = 'Dothan Area Botanical Gardens';
-        dabg.className = 'headline text-center';
-        var info = document.createElement('p');
-        info.innerHTML = '<a class="white" href="' + map_url + '">5130 Headland Ave, Dothan, AL 36303</a>';
-        info.className = 'lead text-center';
-        var extra = document.createElement('p');
-        extra.innerHTML = 'Ceremony &amp; Reception';
-        extra.className = 'text-center cursive';
-        var extra2 = document.createElement('p');
-        extra2.innerHTML = '<br/>Please keep in mind that we are planning an outdoor ceremony and festivities. <br/>High heels and uncomfortable formal wear are not recommended.'
-        extra2.className = 'text-center small';
-        var myTextDiv = document.createElement('div');
-        myTextDiv.className = 'map-text';
-        myTextDiv.appendChild(dabg);
-        myTextDiv.appendChild(info);
-        myTextDiv.appendChild(extra);
-        myTextDiv.appendChild(extra2);
+    var dabg = document.createElement('h1');
+    dabg.innerHTML = 'Dothan Area Botanical Gardens';
+    dabg.className = 'headline text-center';
+    var info = document.createElement('p');
+    info.innerHTML = '<a class="white" href="' + map_url + '">5130 Headland Ave, Dothan, AL 36303</a>';
+    info.className = 'lead text-center';
+    var extra = document.createElement('p');
+    extra.innerHTML = 'Ceremony &amp; Reception';
+    extra.className = 'text-center cursive';
+    var extra2 = document.createElement('p');
+    extra2.innerHTML = '<br/>Please keep in mind that we are planning an outdoor ceremony and festivities. <br/>High heels and uncomfortable formal wear are not recommended.'
+    extra2.className = 'text-center small';
+    var myTextDiv = document.createElement('div');
+    myTextDiv.className = 'map-text';
+    myTextDiv.appendChild(dabg);
+    myTextDiv.appendChild(info);
+    myTextDiv.appendChild(extra);
+    myTextDiv.appendChild(extra2);
 
-        map.controls[google.maps.ControlPosition.CENTER].push(myTextDiv);
-        mapCenter = map.getCenter();
+    map.controls[google.maps.ControlPosition.CENTER].push(myTextDiv);
+    mapCenter = map.getCenter();
     }
 
     google.maps.event.addDomListener(window, 'load', map_init);
     google.maps.event.addDomListener(window, 'resize', function() {
-        map.setCenter(mapCenter);
+    map.setCenter(mapCenter);
     });
 
     $(document).ready(function() {
-      $('body').scrollspy({ 'target': '#navbar-scrollspy' });
+    $('body').scrollspy({ 'target': '#navbar-scrollspy' });
 
-      var t = $("#about").offset().top;
-      var brand = $('.navbar-brand');
+    var t = $("#about").offset().top;
+    var brand = $('.navbar-brand');
 
-      function scrollCheck() {
-        if($(this).scrollTop() + 10 >= t) {
-          brand.fadeIn(200);
-        } else {
-          brand.fadeOut(200);
-        }
-      };
+    function scrollCheck() {
+    if($(this).scrollTop() + 10 >= t) {
+    brand.fadeIn(200);
+    } else {
+    brand.fadeOut(200);
+    }
+    };
 
-      // This is a bit hacky.
-      // My name starts as .hidden, so that it doesn't blink on page load.
-      // But now it will blink "off" if you reload partially down the page.
-      // Oh well, its OK enough.
-      brand.removeClass("hidden");
-      brand.fadeOut(0);
-      scrollCheck();
-      $(document).scroll(scrollCheck);
-      $(function() {
-        $('a[href*=#]:not([href=#])').click(function() {
-          if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-            var target = $(this.hash);
-            target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-            if (target.length) {
-              $('html,body').animate({
-                scrollTop: target.offset().top
-              }, 1000);
-              return false;
-            }
-          }
-        });
-      });
+    // This is a bit hacky.
+    // My name starts as .hidden, so that it doesn't blink on page load.
+    // But now it will blink "off" if you reload partially down the page.
+    // Oh well, its OK enough.
+    brand.removeClass("hidden");
+    brand.fadeOut(0);
+    scrollCheck();
+    $(document).scroll(scrollCheck);
+    $(function() {
+    $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+    var target = $(this.hash);
+    target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+    if (target.length) {
+    $('html,body').animate({
+    scrollTop: target.offset().top
+    }, 1000);
+    return false;
+    }
+    }
+    });
+    });
 
     function setOverlay(id) {
         var overlay = $("#" + id + " > .overlay");
